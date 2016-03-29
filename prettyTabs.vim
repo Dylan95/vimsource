@@ -10,13 +10,13 @@ let g:DCG_lastVirtCol = 1
 
 
 function DCG_tabMod()
-	return((virtcol(".") - 1) % 4)
+	return((virtcol(".") - 1) % &tabstop)
 endfunction
 
 function DCG_tabRound()
-	let mod = ((g:DCG_lastVirtCol - 1) % 4)
+	let mod = ((g:DCG_lastVirtCol - 1) % &tabstop)
 	"echo "mod " . mod
-	if (mod < 2)
+	if (mod < (&tabstop / 2))
 		call cursor(line("."), col("."))
 	else
 		"echo "go right"

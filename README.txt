@@ -1,5 +1,4 @@
-These scripts are designed to split up my vim configuration.  That way I can use parts of it
-for vim plugins for other programs.  And I think it's better organized this way.
+These scripts are designed to split up my vim configuration.  I think it's better organized this way.
 
 In addition, if someone else wants to use just some of my scripts, they can pick and choose which files to source.
 

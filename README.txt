@@ -10,3 +10,5 @@ The only scripts that depend on other plugins are in the "plugins" folder.
 "git.vim" is usefull to me.  But I'm not sure about how usefull it can be to others.
 
 "prettyTabs.vim" is kind of superficial.  It just makes the cursor jump over the full width of the tab in normal mode.  Like a normal text editor.
+
+

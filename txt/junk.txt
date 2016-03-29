@@ -1,0 +1,41 @@
+"junk comments"
+"Position the cursor at the beginning of the text you want to cut/copy.
+"Press v to begin character-based visual selection, or V to select whole lines, or Ctrl-v or Ctrl-q "to select a block.
+"Move the cursor to the end of the text to be cut/copied. While selecting text, you can perform "searches and other advanced movement.
+"Press d (delete) to cut, or y (yank) to copy.
+"Move the cursor to the desired paste location.
+"Press p to paste after the cursor, or P to paste before.
+"
+"joining lines, originally mapped to <Shift> + J might be usefull
+"
+"note to self, use :help map-which-keys
+"nore to self, mapcheck: is also usefull
+"nore to self, help: <key combo> is also usefull
+"
+"
+"<Ctrl-l> redraws the screen and removes any search highlighting.
+"nnoremap <silent> <C-l> :nohl<CR><C-l>
+"hi IncSearch
+"case insensitive search
+"set ic 
+"highlight search
+"set hls
+"
+"Ctrl-C also works by default.
+"inoremap zz <Esc>
+"vnoremap zz <Esc>
+"inoremap jk <Esc>
+"vnoremap jk <Esc>
+"inoremap hh <Esc>
+"vnoremap hh <Esc>
+"
+"let @q=openglProj
+"let @w=openglProj_src
+"let @e=openglProj_include
+"let @r=openglProj_Debug
+"
+"note to self: folds:
+"zf in visual mode will fold the selected lines
+"use zo(top layer) or zO(recursive) to open folds
+"use zd or zD to delete folds
+"regular expressions, see "help regular expressions": concat is implicit, |, *, [0-9], atom

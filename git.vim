@@ -40,9 +40,13 @@ endfunction
 
 "creates a git folder for the current directory
 function GitCreate()
-	call ExecNorm("git init")
-	call ExecNorm("git add .")
-	call ExecNorm("git commit -m 'initial commit'")
+	if isdirectory("./.git")
+		echo "a git directory already exists."
+	else
+		call ExecNorm("git init")
+		call ExecNorm("git add .")
+		call ExecNorm("git commit -m 'initial commit'")
+	endif
 endfunction
 
 "function GitAddAll()

@@ -55,8 +55,12 @@ function DCG_prettyTabs()
 			set virtualedit=onemore
 			"if(getline(".")[col(".")-2] == "\t")
 			if(col(".") == strlen(getline(".")))
-				echo "should jump"
-				call cursor(line("."), col(".") + 1)
+				if(getline(".")[col(".")-2] == "\t")
+					if(getline(".")[col(".")-1] == "\t")
+						echo "should jump"
+						call cursor(line("."), col(".") + 1)
+					endif
+				endif
 			endif
 		endif
 	else

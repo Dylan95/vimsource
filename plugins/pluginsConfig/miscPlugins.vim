@@ -83,6 +83,8 @@ let g:localvimrc_ask = 0
 
 
 
+"ctrlp
+"nnoremap <F2> :call s:PrtClearCache()<Esc>
 
 
 

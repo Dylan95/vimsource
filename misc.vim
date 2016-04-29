@@ -8,7 +8,7 @@ call Map_select('fd', '<Esc>l', 'i', 'v', 'c')
 
 call DisableKeys('i', '<Right>', '<Left>', '<Up>', '<Down>')
 
-map <F2> :mapclear \| so ~/_vimrc<CR>
+"map <F2> :mapclear \| so ~/_vimrc<CR>
 
 
 

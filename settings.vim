@@ -54,3 +54,7 @@ nnoremap <A-l> :call DCG_linebreakToggle
 "set breakat&vim
 
 "set wrap linebreak nolist
+
+
+"disable comment automatic continuation
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

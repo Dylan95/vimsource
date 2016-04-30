@@ -1,1 +1,1 @@
-let b:SuerTabDisabled=0
+let b:SuperTabDisabled=0

@@ -7,6 +7,7 @@
 
 
 let g:DCG_lastVirtCol = 1
+let g:DCG_lastLine = 1
 
 
 function DCG_tabMod()
@@ -15,6 +16,7 @@ endfunction
 
 function DCG_tabRound()
 	let mod = ((g:DCG_lastVirtCol - 1) % &tabstop)
+	echo col(".")
 	"echo "mod " . mod
 	if (mod < (&tabstop / 2))
 		call cursor(line("."), col("."))
@@ -67,11 +69,14 @@ function DCG_prettyTabs()
 		"the initial snap to a tab
 		if b_tab
 			set virtualedit=all
-			call DCG_tabRound()
+			if (line(".") != g:DCG_lastLine)
+				call DCG_tabRound()
+			endif
 		endif
 	endif
 	"
 	let g:DCG_lastVirtCol = virtcol(".")
+	let g:DCG_lastLine = line(".")
 endfunction
 
 autocmd CursorMoved * :call DCG_prettyTabs()

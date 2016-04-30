@@ -57,7 +57,7 @@ function DCG_prettyTabs()
 			if(col(".") == strlen(getline(".")))
 				if(getline(".")[col(".")-2] == "\t")
 					if(getline(".")[col(".")-1] == "\t")
-						echo "should jump"
+						"echo "should jump"
 						call cursor(line("."), col(".") + 1)
 					endif
 				endif

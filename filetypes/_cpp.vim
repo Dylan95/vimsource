@@ -1,4 +1,4 @@
-
+let b:SuerTabDisabled=1
 
 
 "map <F5> !./Debug/*.exe<CR>

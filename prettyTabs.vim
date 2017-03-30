@@ -16,7 +16,7 @@ endfunction
 
 function DCG_tabRound()
 	let mod = ((g:DCG_lastVirtCol - 1) % &tabstop)
-	echo col(".")
+	"echo col(".")
 	"echo "mod " . mod
 	if (mod < (&tabstop / 2))
 		call cursor(line("."), col("."))

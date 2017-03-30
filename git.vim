@@ -63,9 +63,9 @@ function GitSnapshotM(message)
 	call GitUpdate()
 	"delete the tag in case it already exists.  In most cases it doesn't
 	"exist and will cause an error, so I'm using 'silent!'
-	call system("git tag --delete " . l:tagname)
-	call ExecNorm("git tag " . l:tagname)
-	call ExecNorm("git commit -m '" . a:message . "'")
+	call system("git tag --delete " . shellescape(l:tagname))
+	call ExecNorm("git tag " . shellescape(l:tagname))
+	call ExecNorm("git commit -m '" . shellescape(a:message) . "'")
 endfunction
 "
 function GitSnapshot()
@@ -89,12 +89,12 @@ endfunction
 "easyest way is just to go to the website and create it there
 
 function GitAddOriginRemote(url)
-	call ExecNorm("git remote add origin " . a:url)
+	call ExecNorm("git remote add origin " . shellescape(a:url))
 endfunction
 
 "set the remote repository
 function GitSetRemote(url)
-	call ExecNorm("git remote set-url origin " . a:url)
+	call ExecNorm("git remote set-url origin " . shellescape(a:url))
 	"verify remote URL, just shows where it will fetch from and push to.
 	"call ExecNorm("git remote -v")
 endfunction
@@ -155,12 +155,12 @@ endfunction
 
 "create new branch
 function GitBranch(newBranchName)
-	call ExecNorm("git checkout -b " . a:newBranchName)
+	call ExecNorm("git checkout -b " . shellescape(a:newBranchName))
 endfunction
 
 "change branch
 function GitCheckout(branchName)
-	call ExecNorm("git checkout " . a:branchName)
+	call ExecNorm("git checkout " . shellescape(a:branchName))
 endfunction
 
 "commitNum: the commit number to return to.

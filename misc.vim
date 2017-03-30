@@ -11,6 +11,11 @@ call DisableKeys('i', '<Right>', '<Left>', '<Up>', '<Down>')
 "map <F2> :mapclear \| so ~/_vimrc<CR>
 
 
+"Ctrl-s and Ctrl-q don't work because they are
+"signals to the terminal
+nnoremap S :w<CR>
+nnoremap Q :q<CR>
+
 
 
 

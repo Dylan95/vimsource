@@ -1,10 +1,5 @@
 
 
-"Ctrl-s and Ctrl-q don't work because they are
-"signals to the terminal
-nnoremap S :w<CR>
-nnoremap Q :wq<CR>
-
 
 
 "save session

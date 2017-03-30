@@ -11,6 +11,10 @@ set nocompatible
 
 "
 
+let mapleader = "\<Space>"
+
+"
+
 set noswapfile
 
 set virtualedit=onemore

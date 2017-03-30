@@ -18,7 +18,7 @@ function SwapFoldCol()
 	endif
 endfunction
 
-call Map_select('<Space>', 'za', 'n', 'v') 
+call Map_select(',<Space>', 'za', 'n', 'v') 
 "close all folds
 nnoremap zc zm
 

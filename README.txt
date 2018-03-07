@@ -10,21 +10,3 @@ The only scripts that depend on other plugins are in the "plugins" folder.
 
 "prettyTabs.vim" is kind of superficial.  It just makes the cursor jump over the full width of the tab in normal mode.  Like a normal text editor.
 
-
-
-
-
-
-
-
-
-
-
-
-keep prev make .d targets
-
-DEPS = (addsuffix .d,($SRC))
-
-DEPS_RM_FIRST_IF_NOT_NEWEST_CMD = for f in "$@"; do if[[$f -nt $srcBase]] rm $0; done
-DEPS_CLEAN_DEP_CMD = cat @0 | tr -d : | xargs | $DEPS_RM_FIRST_IF_NOT_NEWEST_CMD
-$(shell for dep in $(DEPS); do $(DEPS_CLEAN_DEP_CMD) $$dep; done

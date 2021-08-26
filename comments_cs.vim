@@ -93,7 +93,8 @@ vnoremap <leader>cg :call DCG_sendRangeToGraveyard()<CR>
 
 
 
-autocmd FileType * :let s:comment = ""
+"a good default
+autocmd FileType * :let s:comment = "//"
 "
 autocmd FileType vim :let s:comment = "\""
 autocmd FileType cs :let s:comment = "//"

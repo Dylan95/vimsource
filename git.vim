@@ -113,7 +113,7 @@ function GitPull()
 	call ExecNorm("git pull origin HEAD")
 endfunction
 function GitPullForce()
-	call ExecNorm("git pull --force origin HEAD")
+	call ExecNorm("git pull --allow-unrelated-histories --force origin HEAD")
 endfunction
 
 

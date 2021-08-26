@@ -180,7 +180,6 @@ let g:neocomplete#sources#omni#input_patterns.cs = '.*[^=\);]'
 inoremap <CR> <CR>x<BS>
 "inoremap <CR> <CR>x
 
-nnoremap o ox<BS><ESC>l
 nnoremap O Ox<BS><ESC>l
 
 
